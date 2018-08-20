@@ -1,9 +1,8 @@
 <?php
-
-namespace mdm\admin\controllers;
+namespace moxuandi\admin\controllers;
 
 use Yii;
-use mdm\admin\models\Route;
+use moxuandi\admin\models\Route;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 

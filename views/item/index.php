@@ -2,13 +2,13 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use mdm\admin\components\RouteRule;
-use mdm\admin\components\Configs;
+use moxuandi\admin\components\RouteRule;
+use moxuandi\admin\components\Configs;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-/* @var $searchModel mdm\admin\models\searchs\AuthItem */
-/* @var $context mdm\admin\components\ItemController */
+/* @var $searchModel moxuandi\admin\models\searchs\AuthItem */
+/* @var $context moxuandi\admin\components\ItemController */
 
 $context = $this->context;
 $labels = $context->labels();

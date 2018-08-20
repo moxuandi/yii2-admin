@@ -1,8 +1,7 @@
 <?php
+namespace moxuandi\admin\components;
 
-namespace mdm\admin\components;
-
-use mdm\admin\models\Route;
+use moxuandi\admin\models\Route;
 use Yii;
 use yii\caching\TagDependency;
 use yii\helpers\ArrayHelper;

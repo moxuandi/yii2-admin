@@ -8,7 +8,7 @@ use yii\web\AssetBundle;
  */
 class AutocompleteAsset extends AssetBundle
 {
-    public $sourcePath = '@mdm/admin/assets';
+    public $sourcePath = '@moxuandi/admin/assets';
 
     public $css = [
         'jquery-ui.css',

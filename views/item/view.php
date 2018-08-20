@@ -1,14 +1,14 @@
 <?php
 
-use mdm\admin\AnimateAsset;
+use moxuandi\admin\AnimateAsset;
 use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\web\YiiAsset;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model mdm\admin\models\AuthItem */
-/* @var $context mdm\admin\components\ItemController */
+/* @var $model moxuandi\admin\models\AuthItem */
+/* @var $context moxuandi\admin\components\ItemController */
 
 $context = $this->context;
 $labels = $context->labels();

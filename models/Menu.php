@@ -1,9 +1,8 @@
 <?php
-
-namespace mdm\admin\models;
+namespace moxuandi\admin\models;
 
 use Yii;
-use mdm\admin\components\Configs;
+use moxuandi\admin\components\Configs;
 use yii\db\Query;
 
 /**

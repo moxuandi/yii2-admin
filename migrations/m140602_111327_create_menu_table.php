@@ -1,6 +1,6 @@
 <?php
 
-use mdm\admin\components\Configs;
+use moxuandi\admin\components\Configs;
 
 /**
  * Migration table of table_menu

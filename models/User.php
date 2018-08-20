@@ -1,13 +1,12 @@
 <?php
-
-namespace mdm\admin\models;
+namespace moxuandi\admin\models;
 
 use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
-use mdm\admin\components\Configs;
+use moxuandi\admin\components\Configs;
 
 /**
  * User model

@@ -1,8 +1,7 @@
 <?php
+namespace moxuandi\admin\controllers;
 
-namespace mdm\admin\controllers;
-
-use mdm\admin\components\ItemController;
+use moxuandi\admin\components\ItemController;
 use yii\rbac\Item;
 
 /**

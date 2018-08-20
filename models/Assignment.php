@@ -1,9 +1,8 @@
 <?php
+namespace moxuandi\admin\models;
 
-namespace mdm\admin\models;
-
-use mdm\admin\components\Configs;
-use mdm\admin\components\Helper;
+use moxuandi\admin\components\Configs;
+use moxuandi\admin\components\Helper;
 use Yii;
 
 /**
@@ -12,7 +11,7 @@ use Yii;
  * @author Misbahul D Munir <misbahuldmunir@gmail.com>
  * @since 2.5
  */
-class Assignment extends \mdm\admin\BaseObject
+class Assignment extends \moxuandi\admin\BaseObject
 {
     /**
      * @var integer User id

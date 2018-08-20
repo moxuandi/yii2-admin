@@ -1,10 +1,10 @@
 <?php
 
-namespace mdm\admin\models\form;
+namespace moxuandi\admin\models\form;
 
 use Yii;
 use yii\base\Model;
-use mdm\admin\models\User;
+use moxuandi\admin\models\User;
 
 /**
  * Login form

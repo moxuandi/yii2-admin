@@ -1,15 +1,14 @@
 <?php
-
-namespace mdm\admin\controllers;
+namespace moxuandi\admin\controllers;
 
 use Yii;
-use mdm\admin\models\form\Login;
-use mdm\admin\models\form\PasswordResetRequest;
-use mdm\admin\models\form\ResetPassword;
-use mdm\admin\models\form\Signup;
-use mdm\admin\models\form\ChangePassword;
-use mdm\admin\models\User;
-use mdm\admin\models\searchs\User as UserSearch;
+use moxuandi\admin\models\form\Login;
+use moxuandi\admin\models\form\PasswordResetRequest;
+use moxuandi\admin\models\form\ResetPassword;
+use moxuandi\admin\models\form\Signup;
+use moxuandi\admin\models\form\ChangePassword;
+use moxuandi\admin\models\User;
+use moxuandi\admin\models\searchs\User as UserSearch;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
@@ -51,7 +50,7 @@ class UserController extends Controller
             if (Yii::$app->has('mailer') && ($mailer = Yii::$app->getMailer()) instanceof BaseMailer) {
                 /* @var $mailer BaseMailer */
                 $this->_oldMailPath = $mailer->getViewPath();
-                $mailer->setViewPath('@mdm/admin/mail');
+                $mailer->setViewPath('@moxuandi/admin/mail');
             }
             return true;
         }

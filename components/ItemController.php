@@ -1,10 +1,9 @@
 <?php
-
-namespace mdm\admin\components;
+namespace moxuandi\admin\components;
 
 use Yii;
-use mdm\admin\models\AuthItem;
-use mdm\admin\models\searchs\AuthItem as AuthItemSearch;
+use moxuandi\admin\models\AuthItem;
+use moxuandi\admin\models\searchs\AuthItem as AuthItemSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\base\NotSupportedException;

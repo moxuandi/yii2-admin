@@ -1,9 +1,8 @@
 <?php
+namespace moxuandi\admin\models;
 
-namespace mdm\admin\models;
-
-use mdm\admin\components\Configs;
-use mdm\admin\components\Helper;
+use moxuandi\admin\components\Configs;
+use moxuandi\admin\components\Helper;
 use Yii;
 use yii\base\Model;
 use yii\helpers\Json;
