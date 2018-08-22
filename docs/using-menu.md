@@ -176,9 +176,9 @@ use mdm\admin\components\Helper;
 
 It will check authorization access of button and show or hide it.
 
-More...
+更多...
 ---------------
 
-- [**User Management**](user-management.md)
-- [**Basic Usage**](basic-usage.md)
-- [**Basic Configuration**](configuration.md)
+- [基本配置](configuration.md)
+- [基本用法](basic-usage.md)
+- [用户管理](user-management.md)

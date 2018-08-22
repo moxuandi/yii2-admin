@@ -1,16 +1,15 @@
 Admin Module
 ------------
-- `layout` default to 'left-menu'. Set to null if you want use your current layout.
-- `menus` Change listed menu available for module.
+- `layout` 默认为`left-menu`. 如果要使用当前布局, 请设置为`null`.
+- `menus` 更改可用于模块的列表菜单.
 
-Using module in configuration
+在配置中使用模块:
 
 ```php
 'modules' => [
-    ...
     'admin' => [
         'class' => 'mdm\admin\Module',
-        'layout' => 'left-menu', // it can be '@path/to/your/layout'.
+        'layout' => 'left-menu', // 也可以是 '@path/to/your/layout'.
         'controllerMap' => [
             'assignment' => [
                 'class' => 'mdm\admin\controllers\AssignmentController',
@@ -18,26 +17,26 @@ Using module in configuration
                 'idField' => 'user_id'
             ],
             'other' => [
-                'class' => 'path\to\OtherController', // add another controller
+                'class' => 'path\to\OtherController', // 添加其它控制器
             ],
         ],
         'menus' => [
             'assignment' => [
-                'label' => 'Grand Access' // change label
+                'label' => 'Grand Access' // 更改标签
             ],
-            'route' => null, // disable menu route
+            'route' => null, // 禁用菜单
         ]
 	],
 ],
 ```
 
-Access Control Filter
+Access Control Filter(访问控制过滤器)
 ---------------------
-Access Control Filter (ACF) is a simple authorization method that is best used by applications that only need some simple access control.
-As its name indicates, ACF is an action filter that can be attached to a controller or a module as a behavior.
-ACF will check a set of access rules to make sure the current user can access the requested action.
+Access Control Filter (ACF) 是一种简单的授权方法, 最适合仅需要一些简单访问控制的应用程序.
+正如其名称所示, ACF 是一个动作过滤器, 可以作为行为附加到控制器或模块.
+ACF 将检查一组访问规则, 以确保当前用户可以访问所请求的操作.
 
-The code below shows how to use ACF which is implemented as `mdm\admin\components\AccessControl`:
+下面的代码显示了如何使用 ACF, 它实现为`mdm\admin\components\AccessControl`:
 
 ```php
 'as access' => [
@@ -49,21 +48,20 @@ The code below shows how to use ACF which is implemented as `mdm\admin\component
 ]
 ```
 
-Filter ActionColumn Buttons
+Filter ActionColumn Buttons(ActionColumn 按钮过滤器)
 ---------------------------
-When you use `GridView`, you can also filtering button visibility.
+当你使用`GridView`时, 你还可以过滤按钮的可见性.
 ```php
 use mdm\admin\components\Helper;
 
 'columns' => [
-    ...
     [
         'class' => 'yii\grid\ActionColumn',
         'template' => Helper::filterActionColumn('{view}{delete}{posting}'),
     ]
 ]
 ```
-It will check authorization access of button and show or hide it.
+它将检查按钮的授权访问并显示或隐藏它.
 
 To check access for route, you can use
 ```php
@@ -79,9 +77,9 @@ if(Helper::checkRoute('delete')){
 
 ```
 
-More...
+更多...
 ---------------
 
-- [**User Management**](user-management.md)
-- [**Using Menu**](using-menu.md)
-- [**Basic Configuration**](configuration.md)
+- [基本配置](configuration.md)
+- [用户管理](user-management.md)
+- [使用菜单](using-menu.md)

@@ -40,9 +40,9 @@ Login Page
 ----------
 Login page can access at `index.php?r=admin/user/login`
 
-More...
+更多...
 ---------------
 
-- [**Basic Usage**](basic-usage.md)
-- [**Using Menu**](using-menu.md)
-- [**Basic Configuration**](configuration.md)
+- [基本配置](configuration.md)
+- [基本用法](basic-usage.md)
+- [使用菜单](using-menu.md)

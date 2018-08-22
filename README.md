@@ -7,13 +7,13 @@ Yii2 RABC (基于角色的权限控制) GUI 管理器. 方便管理用户授权 
 
 文档
 -------------
-- [更新历史](CHANGELOG.md).
-- [官方授权指南](http://www.yiiframework.com/doc-2.0/guide-security-authorization.html). 注意, 请在继续之前先阅读此内容.
+- [更新历史](CHANGELOG.md)
+- [官方授权指南](http://www.yiiframework.com/doc-2.0/guide-security-authorization.html) 注意, 请在继续之前先阅读此内容.
 - [基本配置](docs/configuration.md)
-- [基本用法](docs/basic-usage.md).
-- [用户管理](docs/user-management.md).
-- [使用菜单](docs/using-menu.md).
-- [Api 文档](https://mdmsoft.github.io/yii2-admin/index.html).
+- [基本用法](docs/basic-usage.md)
+- [用户管理](docs/user-management.md)
+- [使用菜单](docs/using-menu.md)
+- [Api 文档](https://mdmsoft.github.io/yii2-admin/index.html)
 
 
 安装
