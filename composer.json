@@ -10,6 +10,9 @@
 	},
 	"authors": [
 		{
+			"name": "moxuandi",
+			"email": "1104984259@qq.com"
+		}, {
 			"name": "Misbahul Munir",
 			"email": "misbahuldmunir@gmail.com"
 		}
@@ -27,16 +30,6 @@
 	"autoload": {
 		"psr-4": {
 			"moxuandi\\admin\\": ""
-		}
-	},
-	"extra": {
-		"branch-alias": {
-			"dev-1.0.master": "1.0.x-dev",
-			"dev-master": "2.x-dev"
-		},
-		"asset-installer-paths": {
-			"npm-asset-library": "vendor/npm",
-			"bower-asset-library": "vendor/bower"
 		}
 	}
 }
