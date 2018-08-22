@@ -7,7 +7,7 @@
 return [
     'modules' => [
         'admin' => [
-            'class' => 'mdm\admin\Module',
+            'class' => 'moxuandi\admin\Module',
         ],
     ],
     'components' => [
@@ -16,7 +16,7 @@ return [
         ]
     ],
     'as access' => [
-        'class' => 'mdm\admin\components\AccessControl',
+        'class' => 'moxuandi\admin\components\AccessControl',
         'allowActions' => [  // 此处列出的操作将允许所有人(包括访客)访问
             'site/*',
             'admin/*',
@@ -40,7 +40,7 @@ http://localhost/path/to/index.php?r=admin/user  // 用户
 
 要使用菜单管理器(可选), 请在此处执行数据库迁移:
 ```
-yii migrate --migrationPath=@mdm/admin/migrations
+yii migrate --migrationPath=@moxuandi/admin/migrations
 ```
 
 如果使用数据库(class 'yii\rbac\DbManager')来保存 RBAC 数据, 请在此处执行数据库迁移:
@@ -57,10 +57,10 @@ yii migrate --migrationPath=@yii/rbac/migrations
 ```php
 'modules' => [
     'admin' => [
-        'class' => 'mdm\admin\Module',
+        'class' => 'moxuandi\admin\Module',
         'controllerMap' => [
              'assignment' => [
-                'class' => 'mdm\admin\controllers\AssignmentController',
+                'class' => 'moxuandi\admin\controllers\AssignmentController',
                 /* 'userClassName' => 'app\models\User', */
                 'idField' => 'user_id',
                 'usernameField' => 'username',
@@ -123,7 +123,7 @@ yii migrate --migrationPath=@yii/rbac/migrations
 ```php
 'modules' => [
     'admin' => [
-        'class' => 'mdm\admin\Module',
+        'class' => 'moxuandi\admin\Module',
         'layout' => 'left-menu',
     ],
 ],
@@ -134,7 +134,7 @@ yii migrate --migrationPath=@yii/rbac/migrations
 ```php
 'modules' => [
     'admin' => [
-        'class' => 'mdm\admin\Module',
+        'class' => 'moxuandi\admin\Module',
         'layout' => 'left-menu',
         'menus' => [
             'assignment' => [
@@ -152,7 +152,7 @@ yii migrate --migrationPath=@yii/rbac/migrations
 ```php
 'modules' => [
     'admin' => [
-        'class' => 'mdm\admin\Module',
+        'class' => 'moxuandi\admin\Module',
         'layout' => 'left-menu',
         'mainLayout' => '@app/views/layouts/main.php',
     ],

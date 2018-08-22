@@ -107,8 +107,9 @@ class Route extends \moxuandi\admin\BaseObject
     }
 
     /**
-     * Get available and assigned routes
+     * 获取所有可用和已分配的路由.
      * @return array
+     * @throws \yii\base\InvalidConfigException
      */
     public function getRoutes()
     {

@@ -1,11 +1,10 @@
-Using Menu
+使用菜单
 ==========
 
-Menu manager used for build hierarchical menu. This is automatically look of user 
-role and permision then return menus that he has access.
+菜单管理器用于构建分层菜单. 这将自动检查用户的角色和权限, 然后返回他有权访问的菜单.
 
 ```php
-use mdm\admin\components\MenuHelper;
+use moxuandi\admin\components\MenuHelper;
 use yii\bootstrap\Nav;
 
 echo Nav::widget([
@@ -13,7 +12,8 @@ echo Nav::widget([
 ]);
 ```
 
-Return of `mdm\admin\components\MenuHelper::getAssignedMenu()` has default format like:
+
+`moxuandi\admin\components\MenuHelper::getAssignedMenu()`的默认返回格式如下:
 
 ```php
 [
@@ -25,7 +25,6 @@ Return of `mdm\admin\components\MenuHelper::getAssignedMenu()` has default forma
 				'label' => $menu['name'], 
 				'url' => [$menu['route']]
             ],
-            ....
         ]
     ],
     [
@@ -38,20 +37,18 @@ Return of `mdm\admin\components\MenuHelper::getAssignedMenu()` has default forma
             ]
         ]
     ],
-    ....
 ]
 ```
 
-where `$menu` variable correspond with a record of table `menu`. You can customize 
-return format of `mdm\admin\components\MenuHelper::getAssignedMenu()` by provide a callback to this method.
-The callback must have format `function($menu){}`. E.g:
+其中, `$menu`变量对应于表`menu`中的记录. 你可以通过提供此方法的回调函数来自定义`moxuandi\admin\components\MenuHelper::getAssignedMenu()`的返回格式.
+回调函数的前面必须是`function($menu){}`.
 
-You can add html options attribute to Your menu, for example "title". When You create a menu, in field data (textarea) fill this :
+你可以在菜单中添加 HTML 选项属性, 例如"title". 当你创建菜单时, 在字段数据(textarea)中填写以下内容:
 ```
 return ['title'=>'Title of Your Link Here'];
 ```
 
-and then in Your view:
+然后在视图中:
 
 ```php
 $callback = function($menu){
@@ -67,16 +64,16 @@ $callback = function($menu){
 $items = MenuHelper::getAssignedMenu(Yii::$app->user->id, null, $callback);
 ```
 
-Default result is get from `cache`. If you want to force regenerate, provide boolean `true` as forth parameter.
+默认结果是从`cache`中获得的. 如果要强制重新生成, 请将`true`作为第四个参数提供.
 
-You can modify callback function for advanced usage.
+你可以修改回调函数以进行更高级的用户.
 
-![List Menu](/docs/images/image09.png)
-![Create Menu](/docs/images/image10.png)
+![List Menu](/docs/image09.png)
+![Create Menu](/docs/image10.png)
 
 Using Sparated Menu
 -------------------
-Second parameter of `mdm\admin\components\MenuHelper::getAssignedMenu()` used to get menu on it's own hierarchy.
+Second parameter of `moxuandi\admin\components\MenuHelper::getAssignedMenu()` used to get menu on it's own hierarchy.
 E.g. Your menu structure:
 
 * Side Menu
@@ -113,12 +110,12 @@ It will result in
   * Menu 2.2
   * Menu 2.3
 
-Filtering Menu
+过滤菜单
 --------------
-If you have `NavBar` menu items and want to filtering according user login. You can use Helper class
+如果你有`NavBar`菜单项并希望根据登录用户进行过滤, 你可以使用 Helper 类:
 ```php
 
-user mdm\admin\components\Helper;
+user moxuandi\admin\components\Helper;
 
 $menuItems = [
     ['label' => 'Home', 'url' => ['/site/index']],
@@ -146,9 +143,9 @@ echo Nav::widget([
 ]);
 ```
 
-You can also check for individual route.
+你还可以针对单独路由进行检查:
 ```php
-use mdm\admin\components\Helper;
+use moxuandi\admin\components\Helper;
 
 if(Helper::checkRoute('delete')){
     echo Html::a(Yii::t('rbac-admin', 'Delete'), ['delete', 'id' => $model->name], [
@@ -159,11 +156,11 @@ if(Helper::checkRoute('delete')){
 }
 ```
 
-Filter ActionColumn Buttons
+过滤 ActionColumn 按钮
 ---------------------------
-When you use `GridView`, you can also filtering button visibility.
+当你使用`GridView`时, 你还可以过滤按钮的可见性. 它将检查按钮的访问授权并控制其显示/隐藏:
 ```php
-use mdm\admin\components\Helper;
+use moxuandi\admin\components\Helper;
 
 'columns' => [
     ...
@@ -174,7 +171,6 @@ use mdm\admin\components\Helper;
 ]
 ```
 
-It will check authorization access of button and show or hide it.
 
 更多...
 ---------------

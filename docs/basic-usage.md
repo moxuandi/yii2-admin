@@ -8,11 +8,11 @@ Admin Module
 ```php
 'modules' => [
     'admin' => [
-        'class' => 'mdm\admin\Module',
+        'class' => 'moxuandi\admin\Module',
         'layout' => 'left-menu', // 也可以是 '@path/to/your/layout'.
         'controllerMap' => [
             'assignment' => [
-                'class' => 'mdm\admin\controllers\AssignmentController',
+                'class' => 'moxuandi\admin\controllers\AssignmentController',
                 'userClassName' => 'app\models\User',
                 'idField' => 'user_id'
             ],
@@ -36,11 +36,11 @@ Access Control Filter (ACF) 是一种简单的授权方法, 最适合仅需要�
 正如其名称所示, ACF 是一个动作过滤器, 可以作为行为附加到控制器或模块.
 ACF 将检查一组访问规则, 以确保当前用户可以访问所请求的操作.
 
-下面的代码显示了如何使用 ACF, 它实现为`mdm\admin\components\AccessControl`:
+下面的代码显示了如何使用 ACF, 它实现为`moxuandi\admin\components\AccessControl`:
 
 ```php
 'as access' => [
-    'class' => 'mdm\admin\components\AccessControl',
+    'class' => 'moxuandi\admin\components\AccessControl',
     'allowActions' => [
         'site/login',
         'site/error',
@@ -52,7 +52,7 @@ Filter ActionColumn Buttons(ActionColumn 按钮过滤器)
 ---------------------------
 当你使用`GridView`时, 你还可以过滤按钮的可见性.
 ```php
-use mdm\admin\components\Helper;
+use moxuandi\admin\components\Helper;
 
 'columns' => [
     [
@@ -65,7 +65,7 @@ use mdm\admin\components\Helper;
 
 To check access for route, you can use
 ```php
-use mdm\admin\components\Helper;
+use moxuandi\admin\components\Helper;
 
 if(Helper::checkRoute('delete')){
     echo Html::a(Yii::t('rbac-admin', 'Delete'), ['delete', 'id' => $model->name], [

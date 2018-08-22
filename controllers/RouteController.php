@@ -2,12 +2,12 @@
 namespace moxuandi\admin\controllers;
 
 use Yii;
-use moxuandi\admin\models\Route;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
+use moxuandi\admin\models\Route;
 
 /**
- * Description of RuleController
+ * 路由管理器
  *
  * @author Misbahul D Munir <misbahuldmunir@gmail.com>
  * @since 1.0
@@ -28,9 +28,10 @@ class RouteController extends Controller
             ],
         ];
     }
+
     /**
-     * Lists all Route models.
-     * @return mixed
+     * 列出所有的路由
+     * @return string
      */
     public function actionIndex()
     {
@@ -39,9 +40,8 @@ class RouteController extends Controller
     }
 
     /**
-     * Creates a new AuthItem model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
+     * 创建一个新的 AuthItem 模型.
+     * @return array
      */
     public function actionCreate()
     {
@@ -54,7 +54,7 @@ class RouteController extends Controller
     }
 
     /**
-     * Assign routes
+     * 注册路由到系统.
      * @return array
      */
     public function actionAssign()
@@ -67,7 +67,7 @@ class RouteController extends Controller
     }
 
     /**
-     * Remove routes
+     * 移除路由.
      * @return array
      */
     public function actionRemove()
@@ -80,8 +80,8 @@ class RouteController extends Controller
     }
 
     /**
-     * Refresh cache
-     * @return type
+     * 刷新路由.
+     * @return array
      */
     public function actionRefresh()
     {

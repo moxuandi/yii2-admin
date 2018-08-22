@@ -1,44 +1,43 @@
-User Management
+用户管理
 ===============
 
-For `basic application template` that want to have user stored in database.
-To use this feature, create required table by execute migration.
+对于需要将用户存储在数据库中的`基本应用程序模板(basic)`. 要使用此功能, 请通过执行迁移创建所需的表.
 ```
-./yii migrate --migrationPath=@mdm/admin/migrations
+./yii migrate --migrationPath=@moxuandi/admin/migrations
 ```
-Then, change config of user component
+然后, 修改用户组件的配置:
 ```php
-    'components' => [
-        ...
-        'user' => [
-            'identityClass' => 'mdm\admin\models\User',
-            'loginUrl' => ['admin/user/login'],
-        ]
-    ]
+'components' => [
+    'user' => [
+        'identityClass' => 'moxuandi\admin\models\User',
+        'loginUrl' => ['admin/user/login'],
+    ],
+]
 ```
-Then you can access this menu at `index.php?r=admin/user`.
+然后你可以通过`index.php?r=admin/user`访问此菜单.
 
-Signup User
+
+注册用户
 -----------
 ```
 http://localhost/myapp/index.php?r=admin/user/signup
 ```
-Default registered user has status `ACTIVE`, mean user can login without activation needed.
-To change that, you can change at config/params.php
+默认注册用户的状态为`ACTIVE`, 表示用户无需激活即可登录.
+你可以在`config/params.php`中修改它:
 ```php
 // config/params.php
 
 return [
-    ...
-    'mdm.admin.configs' => [
+    'moxuandi.admin.configs' => [
         'defaultUserStatus' => 0, // 0 = inactive, 10 = active
     ]
 ];
 ```
 
-Login Page
+登录页面
 ----------
-Login page can access at `index.php?r=admin/user/login`
+登录页面访问`index.php?r=admin/user/login`.
+
 
 更多...
 ---------------
