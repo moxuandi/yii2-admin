@@ -1,15 +1,15 @@
 <?php
-/* @var $this yii\web\View */
-/* @var $model moxuandi\admin\models\Menu */
-/* @var $form yii\widgets\ActiveForm */
+/* @var $this \yii\web\View */
+/* @var $model \moxuandi\admin\models\Menu */
 
 use yii\helpers\Html;
+use yii\helpers\Json;
 use yii\widgets\ActiveForm;
 use moxuandi\admin\models\Menu;
-use yii\helpers\Json;
 use moxuandi\admin\assets\AutoCompleteAsset;
 
 AutoCompleteAsset::register($this);
+
 $opts = Json::htmlEncode([
     'menus' => Menu::getMenuSource(),
     'routes' => Menu::getSavedRoutes(),
@@ -17,10 +17,9 @@ $opts = Json::htmlEncode([
 $this->registerJs("var _opts = $opts;");
 $this->registerJs($this->render('_script.js'));
 ?>
-
 <div class="menu-form">
     <?php $form = ActiveForm::begin(); ?>
-    <?= Html::activeHiddenInput($model, 'parent', ['id' => 'parent_id']); ?>
+    <?= Html::activeHiddenInput($model, 'parent', ['id' => 'parent_id']) ?>
     <div class="row">
         <div class="col-sm-6">
             <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>

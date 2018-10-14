@@ -1,16 +1,16 @@
 <?php
+/* @var $this \yii\web\View */
+/* @var $model \moxuandi\admin\models\AuthItem */
+/* @var $context \moxuandi\admin\components\ItemController */
 
 use yii\helpers\Html;
+use yii\helpers\Json;
 use yii\widgets\ActiveForm;
 use moxuandi\admin\components\RouteRule;
 use moxuandi\admin\assets\AutoCompleteAsset;
-use yii\helpers\Json;
 use moxuandi\admin\components\Configs;
 
-/* @var $this yii\web\View */
-/* @var $model moxuandi\admin\models\AuthItem */
-/* @var $form yii\widgets\ActiveForm */
-/* @var $context moxuandi\admin\components\ItemController */
+AutoCompleteAsset::register($this);
 
 $context = $this->context;
 $labels = $context->labels();
@@ -18,13 +18,7 @@ $rules = Configs::authManager()->getRules();
 unset($rules[RouteRule::RULE_NAME]);
 $source = Json::htmlEncode(array_keys($rules));
 
-$js = <<<JS
-    $('#rule_name').autocomplete({
-        source: $source,
-    });
-JS;
-AutoCompleteAsset::register($this);
-$this->registerJs($js);
+$this->registerJs("$('#rule_name').autocomplete({source: $source});");
 ?>
 <div class="auth-item-form">
     <?php $form = ActiveForm::begin(['id' => 'item-form']); ?>
@@ -39,11 +33,10 @@ $this->registerJs($js);
         </div>
     </div>
     <div class="form-group">
-        <?php
-        echo Html::submitButton($model->isNewRecord ? Yii::t('rbac-admin', 'Create') : Yii::t('rbac-admin', 'Update'), [
+        <?= Html::submitButton($model->isNewRecord ? Yii::t('rbac-admin', 'Create') : Yii::t('rbac-admin', 'Update'), [
             'class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary',
-            'name' => 'submit-button'])
-        ?>
+            'name' => 'submit-button',
+        ]) ?>
     </div>
     <?php ActiveForm::end(); ?>
 </div>

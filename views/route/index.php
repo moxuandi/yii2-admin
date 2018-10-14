@@ -7,18 +7,18 @@ use yii\helpers\Json;
 use yii\web\YiiAsset;
 use moxuandi\admin\assets\AnimateAsset;
 
+YiiAsset::register($this);
+AnimateAsset::register($this);
+
 $this->title = Yii::t('rbac-admin', 'Routes');
 $this->params['breadcrumbs'][] = $this->title;
-
-AnimateAsset::register($this);
-YiiAsset::register($this);
 
 $opts = Json::htmlEncode(['routes' => $routes]);
 $this->registerJs("var _opts = {$opts};");
 $this->registerJs($this->render('_script.js'));
 $animateIcon = ' <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></i>';
 ?>
-<h1><?= Html::encode($this->title) ?></h1>
+<h1 class="rbac-title"><?= Html::encode($this->title) ?></h1>
 <div class="row">
     <div class="col-sm-11">
         <div class="input-group">
@@ -27,14 +27,13 @@ $animateIcon = ' <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate
                 <?= Html::a(Yii::t('rbac-admin', 'Add') . $animateIcon, ['create'], [
                     'id' => 'btn-new',
                     'class' => 'btn btn-success',
-                    'title' => Yii::t('rbac-admin', 'Refresh'),  // ########################
+                    'title' => Yii::t('rbac-admin', 'Add'),
                 ]) ?>
             </span>
         </div>
     </div>
 </div>
-<p>&nbsp;</p>
-<div class="row">
+<div class="row divider">
     <div class="col-sm-5">
         <div class="input-group">
             <input class="form-control search" data-target="available" placeholder="<?= Yii::t('rbac-admin', 'Search for available') ?>">
