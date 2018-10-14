@@ -43,10 +43,11 @@ http://localhost/path/to/index.php?r=admin/user  // 用户
 yii migrate --migrationPath=@moxuandi/admin/migrations
 ```
 
-如果使用数据库(class 'yii\rbac\DbManager')来保存 RBAC 数据, 请在此处执行数据库迁移:
+如果使用数据库(class `yii\rbac\DbManager`)来保存 RBAC 数据, 请在此处执行数据库迁移:
 ```
 yii migrate --migrationPath=@yii/rbac/migrations
 ```
+
 
 自定义授权控制器
 ---------------------------------
