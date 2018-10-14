@@ -8,7 +8,7 @@ Yii2 RABC (基于角色的权限控制) GUI 管理器. 方便管理用户授权 
 文档
 -------------
 - [更新历史](CHANGELOG.md)
-- [官方授权指南](http://www.yiiframework.com/doc-2.0/guide-security-authorization.html) 注意, 请在继续之前先阅读此内容.
+- [官方授权指南](https://www.yiiframework.com/doc/guide/2.0/zh-cn/security-authorization) 注意, 请在继续之前先阅读此内容.
 - [基本配置](docs/configuration.md)
 - [基本用法](docs/basic-usage.md)
 - [用户管理](docs/user-management.md)
@@ -20,7 +20,9 @@ Yii2 RABC (基于角色的权限控制) GUI 管理器. 方便管理用户授权 
 ------------
 使用 [composer](http://getcomposer.org/download/) 下载:
 ```
+# 2.x(yii >= 2.0.16):
 composer require moxuandi/yii2-admin:~2.0"
+
+# 开发版:
 composer require moxuandi/yii2-admin:"dev-master"
-composer require --prefer-dist moxuandi/yii2-admin:"dev-master"
 ```
