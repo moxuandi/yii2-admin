@@ -4,9 +4,6 @@
 
 use yii\helpers\Html;
 
-list(, $url) = Yii::$app->assetManager->publish('@moxuandi/admin/assets');
-$this->registerCssFile($url . '/list-item.css', ['depends' => ['yii\bootstrap\BootstrapAsset']]);
-
 $controller = $this->context;
 $menus = $controller->module->menus;
 $route = $controller->route;

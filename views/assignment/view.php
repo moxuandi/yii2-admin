@@ -1,6 +1,6 @@
 <?php
 
-use moxuandi\admin\AnimateAsset;
+use moxuandi\admin\assets\AnimateAsset;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Json;
@@ -43,15 +43,15 @@ $animateIcon = ' <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate
         <div class="col-sm-1">
             <br><br>
             <?=Html::a('&gt;&gt;' . $animateIcon, ['assign', 'id' => (string) $model->id], [
-    'class' => 'btn btn-success btn-assign',
-    'data-target' => 'available',
-    'title' => Yii::t('rbac-admin', 'Assign'),
-]);?><br><br>
+                'class' => 'btn btn-success btn-assign',
+                'data-target' => 'available',
+                'title' => Yii::t('rbac-admin', 'Assign'),
+            ]);?><br><br>
             <?=Html::a('&lt;&lt;' . $animateIcon, ['revoke', 'id' => (string) $model->id], [
-    'class' => 'btn btn-danger btn-assign',
-    'data-target' => 'assigned',
-    'title' => Yii::t('rbac-admin', 'Remove'),
-]);?>
+                'class' => 'btn btn-danger btn-assign',
+                'data-target' => 'assigned',
+                'title' => Yii::t('rbac-admin', 'Remove'),
+            ]);?>
         </div>
         <div class="col-sm-5">
             <input class="form-control search" data-target="assigned"

@@ -1,5 +1,5 @@
 <?php
-namespace moxuandi\admin;
+namespace moxuandi\admin\assets;
 
 use yii\web\AssetBundle;
 
@@ -8,9 +8,13 @@ use yii\web\AssetBundle;
  */
 class AnimateAsset extends AssetBundle
 {
-    public $sourcePath = '@moxuandi/admin/assets';
+    public $sourcePath = '@moxuandi/admin/static';
 
     public $css = [
         'animate.css',
+    ];
+
+    public $depends = [
+        'yii\bootstrap\BootstrapAsset',
     ];
 }

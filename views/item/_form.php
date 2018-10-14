@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use moxuandi\admin\components\RouteRule;
-use moxuandi\admin\AutoCompleteAsset;
+use moxuandi\admin\assets\AutoCompleteAsset;
 use yii\helpers\Json;
 use moxuandi\admin\components\Configs;
 
@@ -26,18 +26,15 @@ JS;
 AutoCompleteAsset::register($this);
 $this->registerJs($js);
 ?>
-
 <div class="auth-item-form">
     <?php $form = ActiveForm::begin(['id' => 'item-form']); ?>
     <div class="row">
         <div class="col-sm-6">
             <?= $form->field($model, 'name')->textInput(['maxlength' => 64]) ?>
-
             <?= $form->field($model, 'description')->textarea(['rows' => 2]) ?>
         </div>
         <div class="col-sm-6">
             <?= $form->field($model, 'ruleName')->textInput(['id' => 'rule_name']) ?>
-
             <?= $form->field($model, 'data')->textarea(['rows' => 6]) ?>
         </div>
     </div>
@@ -48,6 +45,5 @@ $this->registerJs($js);
             'name' => 'submit-button'])
         ?>
     </div>
-
     <?php ActiveForm::end(); ?>
 </div>

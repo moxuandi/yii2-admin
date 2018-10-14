@@ -5,9 +5,9 @@
 use yii\bootstrap\NavBar;
 use yii\bootstrap\Nav;
 use yii\helpers\Html;
+use moxuandi\admin\assets\MainAsset;
 
-list(, $url) = Yii::$app->assetManager->publish('@moxuandi/admin/assets');
-$this->registerCssFile($url . '/main.css', ['depends' => ['yii\bootstrap\BootstrapAsset']]);
+MainAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
