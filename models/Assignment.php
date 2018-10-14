@@ -1,9 +1,10 @@
 <?php
 namespace moxuandi\admin\models;
 
+use Yii;
+use moxuandi\admin\BaseObject;
 use moxuandi\admin\components\Configs;
 use moxuandi\admin\components\Helper;
-use Yii;
 
 /**
  * Description of Assignment
@@ -11,7 +12,7 @@ use Yii;
  * @author Misbahul D Munir <misbahuldmunir@gmail.com>
  * @since 2.5
  */
-class Assignment extends \moxuandi\admin\BaseObject
+class Assignment extends BaseObject
 {
     /**
      * @var integer User id

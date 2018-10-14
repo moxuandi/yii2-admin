@@ -103,7 +103,7 @@ class Module extends \yii\base\Module
             ];
         }
         if (class_exists('yii\jui\JuiAsset')) {
-            Yii::$container->set('moxuandi\admin\AutocompleteAsset', 'yii\jui\JuiAsset');
+            Yii::$container->set('moxuandi\admin\AutoCompleteAsset', 'yii\jui\JuiAsset');
         }
     }
 

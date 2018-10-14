@@ -4,12 +4,12 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use moxuandi\admin\models\Menu;
 use yii\helpers\Json;
-use moxuandi\admin\AutocompleteAsset;
+use moxuandi\admin\AutoCompleteAsset;
 
 /* @var $this yii\web\View */
 /* @var $model moxuandi\admin\models\Menu */
 /* @var $form yii\widgets\ActiveForm */
-AutocompleteAsset::register($this);
+AutoCompleteAsset::register($this);
 $opts = Json::htmlEncode([
         'menus' => Menu::getMenuSource(),
         'routes' => Menu::getSavedRoutes(),

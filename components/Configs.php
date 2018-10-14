@@ -7,6 +7,7 @@ use yii\db\Connection;
 use yii\di\Instance;
 use yii\helpers\ArrayHelper;
 use yii\rbac\ManagerInterface;
+use moxuandi\admin\BaseObject;
 
 /**
  * Configs
@@ -39,7 +40,7 @@ use yii\rbac\ManagerInterface;
  * @since 1.0
  */
 
-class Configs extends \moxuandi\admin\BaseObject
+class Configs extends BaseObject
 {
     const CACHE_TAG = 'mdm.admin';
 

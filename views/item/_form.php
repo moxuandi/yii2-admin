@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use moxuandi\admin\components\RouteRule;
-use moxuandi\admin\AutocompleteAsset;
+use moxuandi\admin\AutoCompleteAsset;
 use yii\helpers\Json;
 use moxuandi\admin\components\Configs;
 
@@ -23,7 +23,7 @@ $js = <<<JS
         source: $source,
     });
 JS;
-AutocompleteAsset::register($this);
+AutoCompleteAsset::register($this);
 $this->registerJs($js);
 ?>
 

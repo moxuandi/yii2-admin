@@ -1,13 +1,14 @@
 <?php
 namespace moxuandi\admin\models;
 
-use Exception;
-use moxuandi\admin\components\Configs;
-use moxuandi\admin\components\Helper;
-use moxuandi\admin\components\RouteRule;
 use Yii;
 use yii\caching\TagDependency;
 use yii\helpers\VarDumper;
+use Exception;
+use moxuandi\admin\BaseObject;
+use moxuandi\admin\components\Configs;
+use moxuandi\admin\components\Helper;
+use moxuandi\admin\components\RouteRule;
 
 /**
  * Description of Route
@@ -15,7 +16,7 @@ use yii\helpers\VarDumper;
  * @author Misbahul D Munir <misbahuldmunir@gmail.com>
  * @since 1.0
  */
-class Route extends \moxuandi\admin\BaseObject
+class Route extends BaseObject
 {
     const CACHE_TAG = 'mdm.admin.route';
 

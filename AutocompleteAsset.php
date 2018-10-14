@@ -4,18 +4,18 @@ namespace moxuandi\admin;
 use yii\web\AssetBundle;
 
 /**
- * Description of AutocompleteAsset
+ * Description of AutoCompleteAsset
  */
-class AutocompleteAsset extends AssetBundle
+class AutoCompleteAsset extends AssetBundle
 {
     public $sourcePath = '@moxuandi/admin/assets';
 
     public $css = [
-        'jquery-ui.css',
+        'jquery-ui.min.css',
     ];
 
     public $js = [
-        'jquery-ui.js',
+        'jquery-ui.min.js',
     ];
 
     public $depends = [
