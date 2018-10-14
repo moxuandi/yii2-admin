@@ -7,10 +7,7 @@ use yii\filters\VerbFilter;
 use moxuandi\admin\models\Route;
 
 /**
- * 路由管理器
- *
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
+ * 路由管理.
  */
 class RouteController extends Controller
 {

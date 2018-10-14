@@ -14,9 +14,6 @@ namespace moxuandi\admin\components;
  *
  * You may change the names of the three tables used to store the authorization data by setting [[\yii\rbac\DbManager::$itemTable]],
  * [[\yii\rbac\DbManager::$itemChildTable]] and [[\yii\rbac\DbManager::$assignmentTable]].
- *
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
  */
 class DbManager extends \yii\rbac\DbManager
 {

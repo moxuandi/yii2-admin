@@ -1,11 +1,10 @@
 <?php
-
 namespace moxuandi\admin\models\form;
 
 use Yii;
-use moxuandi\admin\models\User;
 use yii\base\InvalidParamException;
 use yii\base\Model;
+use moxuandi\admin\models\User;
 
 /**
  * Password reset form

@@ -34,9 +34,6 @@ use moxuandi\admin\models\Menu;
  *
  * $items = MenuHelper::getAssignedMenu(Yii::$app->user->id, null, $callback);
  * ```
- *
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
  */
 class MenuHelper
 {

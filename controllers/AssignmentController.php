@@ -2,17 +2,14 @@
 namespace moxuandi\admin\controllers;
 
 use Yii;
-use moxuandi\admin\models\Assignment;
-use moxuandi\admin\models\searchs\Assignment as AssignmentSearch;
+use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
+use moxuandi\admin\models\Assignment;
+use moxuandi\admin\models\searchs\Assignment as AssignmentSearch;
 
 /**
  * AssignmentController implements the CRUD actions for Assignment model.
- *
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
  */
 class AssignmentController extends Controller
 {

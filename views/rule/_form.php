@@ -5,7 +5,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 ?>
-<div class="auth-item-form">
+<div class="rule-form">
     <?php $form = ActiveForm::begin(); ?>
     <?= $form->field($model, 'name')->textInput(['maxlength' => 64]) ?>
     <?= $form->field($model, 'className')->textInput() ?>

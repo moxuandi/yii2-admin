@@ -35,9 +35,6 @@ use moxuandi\admin\BaseObject;
  *     'menuTable' => 'admin_menu',
  * ]);
  * ```
- *
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
  */
 
 class Configs extends BaseObject

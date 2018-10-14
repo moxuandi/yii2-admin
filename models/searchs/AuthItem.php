@@ -1,18 +1,14 @@
 <?php
-
 namespace moxuandi\admin\models\searchs;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ArrayDataProvider;
-use moxuandi\admin\components\Configs;
 use yii\rbac\Item;
+use moxuandi\admin\components\Configs;
 
 /**
  * AuthItemSearch represents the model behind the search form about AuthItem.
- * 
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
  */
 class AuthItem extends Model
 {

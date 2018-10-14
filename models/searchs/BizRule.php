@@ -1,19 +1,15 @@
 <?php
-
 namespace moxuandi\admin\models\searchs;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ArrayDataProvider;
 use moxuandi\admin\models\BizRule as MBizRule;
-use moxuandi\admin\components\RouteRule;
 use moxuandi\admin\components\Configs;
+use moxuandi\admin\components\RouteRule;
 
 /**
  * Description of BizRule
- *
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
  */
 class BizRule extends Model
 {

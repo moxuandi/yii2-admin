@@ -2,8 +2,8 @@
 namespace moxuandi\admin\models;
 
 use Yii;
-use moxuandi\admin\components\Configs;
 use yii\db\Query;
+use moxuandi\admin\components\Configs;
 
 /**
  * This is the model class for table "menu".
@@ -17,9 +17,6 @@ use yii\db\Query;
  *
  * @property Menu $menuParent Menu parent
  * @property Menu[] $menus Menu children
- *
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
  */
 class Menu extends \yii\db\ActiveRecord
 {

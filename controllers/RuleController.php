@@ -2,19 +2,16 @@
 namespace moxuandi\admin\controllers;
 
 use Yii;
-use moxuandi\admin\models\BizRule;
-use yii\web\Controller;
-use moxuandi\admin\models\searchs\BizRule as BizRuleSearch;
 use yii\filters\VerbFilter;
+use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use moxuandi\admin\components\Helper;
 use moxuandi\admin\components\Configs;
+use moxuandi\admin\components\Helper;
+use moxuandi\admin\models\BizRule;
+use moxuandi\admin\models\searchs\BizRule as BizRuleSearch;
 
 /**
  * Description of RuleController
- *
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
  */
 class RuleController extends Controller
 {

@@ -2,8 +2,8 @@
 namespace moxuandi\admin\models\form;
 
 use Yii;
-use moxuandi\admin\models\User;
 use yii\base\Model;
+use moxuandi\admin\models\User;
 
 /**
  * Password reset request form

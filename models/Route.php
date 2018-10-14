@@ -12,9 +12,6 @@ use moxuandi\admin\components\RouteRule;
 
 /**
  * Description of Route
- *
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
  */
 class Route extends BaseObject
 {

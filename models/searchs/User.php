@@ -1,5 +1,4 @@
 <?php
-
 namespace moxuandi\admin\models\searchs;
 
 use Yii;

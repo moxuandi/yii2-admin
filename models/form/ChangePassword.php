@@ -1,16 +1,12 @@
 <?php
-
 namespace moxuandi\admin\models\form;
 
 use Yii;
-use moxuandi\admin\models\User;
 use yii\base\Model;
+use moxuandi\admin\models\User;
 
 /**
  * Description of ChangePassword
- *
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
  */
 class ChangePassword extends Model
 {

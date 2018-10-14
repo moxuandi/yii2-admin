@@ -1,5 +1,4 @@
 <?php
-
 namespace moxuandi\admin\models\searchs;
 
 use Yii;
@@ -8,9 +7,6 @@ use yii\data\ActiveDataProvider;
 
 /**
  * AssignmentSearch represents the model behind the search form about Assignment.
- * 
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
  */
 class Assignment extends Model
 {

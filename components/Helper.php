@@ -1,17 +1,14 @@
 <?php
 namespace moxuandi\admin\components;
 
-use moxuandi\admin\models\Route;
 use Yii;
 use yii\caching\TagDependency;
 use yii\helpers\ArrayHelper;
 use yii\web\User;
+use moxuandi\admin\models\Route;
 
 /**
  * Description of Helper
- *
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 2.3
  */
 class Helper
 {

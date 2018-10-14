@@ -2,22 +2,19 @@
 namespace moxuandi\admin\components;
 
 use Yii;
-use moxuandi\admin\models\AuthItem;
-use moxuandi\admin\models\searchs\AuthItem as AuthItemSearch;
-use yii\web\Controller;
-use yii\web\NotFoundHttpException;
 use yii\base\NotSupportedException;
 use yii\filters\VerbFilter;
 use yii\rbac\Item;
+use yii\web\Controller;
+use yii\web\NotFoundHttpException;
+use moxuandi\admin\models\AuthItem;
+use moxuandi\admin\models\searchs\AuthItem as AuthItemSearch;
 
 /**
  * AuthItemController implements the CRUD actions for AuthItem model.
  *
  * @property integer $type
  * @property array $labels
- * 
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
  */
 class ItemController extends Controller
 {
@@ -166,7 +163,6 @@ class ItemController extends Controller
      */
     public function getType()
     {
-        
     }
 
     /**

@@ -1,12 +1,12 @@
 <?php
 namespace moxuandi\admin\models;
 
-use moxuandi\admin\components\Configs;
-use moxuandi\admin\components\Helper;
 use Yii;
 use yii\base\Model;
 use yii\helpers\Json;
 use yii\rbac\Item;
+use moxuandi\admin\components\Configs;
+use moxuandi\admin\components\Helper;
 
 /**
  * This is the model class for table "tbl_auth_item".
@@ -18,9 +18,6 @@ use yii\rbac\Item;
  * @property string $data
  *
  * @property Item $item
- *
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
  */
 class AuthItem extends Model
 {

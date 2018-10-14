@@ -2,20 +2,20 @@
 namespace moxuandi\admin\controllers;
 
 use Yii;
+use yii\base\InvalidParamException;
+use yii\base\UserException;
+use yii\filters\VerbFilter;
+use yii\mail\BaseMailer;
+use yii\web\BadRequestHttpException;
+use yii\web\Controller;
+use yii\web\NotFoundHttpException;
+use moxuandi\admin\models\User;
+use moxuandi\admin\models\form\ChangePassword;
 use moxuandi\admin\models\form\Login;
 use moxuandi\admin\models\form\PasswordResetRequest;
 use moxuandi\admin\models\form\ResetPassword;
 use moxuandi\admin\models\form\Signup;
-use moxuandi\admin\models\form\ChangePassword;
-use moxuandi\admin\models\User;
 use moxuandi\admin\models\searchs\User as UserSearch;
-use yii\base\InvalidParamException;
-use yii\web\BadRequestHttpException;
-use yii\web\Controller;
-use yii\filters\VerbFilter;
-use yii\web\NotFoundHttpException;
-use yii\base\UserException;
-use yii\mail\BaseMailer;
 
 /**
  * User controller

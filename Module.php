@@ -30,9 +30,6 @@ use yii\helpers\Inflector;
  * @property string $mainLayout 模块使用的布局视图. 默认为父模块的布局.
  * 当`layout`设置为`left-menu`, `right-menu`或`top-menu`时, 使用它.
  * @property array $menus 列出模块的可用菜单. 它有模块项目生成.
- *
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
  */
 class Module extends \yii\base\Module
 {

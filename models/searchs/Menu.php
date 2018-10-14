@@ -1,5 +1,4 @@
 <?php
-
 namespace moxuandi\admin\models\searchs;
 
 use Yii;
@@ -9,9 +8,6 @@ use moxuandi\admin\models\Menu as MenuModel;
 
 /**
  * Menu represents the model behind the search form about [[\moxuandi\admin\models\Menu]].
- * 
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
  */
 class Menu extends MenuModel
 {

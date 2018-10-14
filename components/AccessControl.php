@@ -1,15 +1,15 @@
 <?php
 namespace moxuandi\admin\components;
 
-use yii\web\ForbiddenHttpException;
-use yii\base\Module;
 use Yii;
-use yii\web\User;
+use yii\base\Module;
 use yii\di\Instance;
+use yii\web\ForbiddenHttpException;
+use yii\web\User;
 
 /**
- * Access Control Filter (ACF) is a simple authorization method that is best used by applications that only need some simple access control. 
- * As its name indicates, ACF is an action filter that can be attached to a controller or a module as a behavior. 
+ * Access Control Filter (ACF) is a simple authorization method that is best used by applications that only need some simple access control.
+ * As its name indicates, ACF is an action filter that can be attached to a controller or a module as a behavior.
  * ACF will check a set of access rules to make sure the current user can access the requested action.
  *
  * To use AccessControl, declare it in the application config as behavior.
@@ -23,9 +23,6 @@ use yii\di\Instance;
  * ```
  *
  * @property User $user
- * 
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
  */
 class AccessControl extends \yii\base\ActionFilter
 {
@@ -104,13 +101,13 @@ class AccessControl extends \yii\base\ActionFilter
             $loginUrl = null;
             if(is_array($user->loginUrl) && isset($user->loginUrl[0])){
                 $loginUrl = $user->loginUrl[0];
-                }else if(is_string($user->loginUrl)){
-                    $loginUrl = $user->loginUrl;
-                }
-                if(!is_null($loginUrl) && trim($loginUrl,'/') === $uniqueId)
-                {
-                    return false;
-                }
+            }else if(is_string($user->loginUrl)){
+                $loginUrl = $user->loginUrl;
+            }
+            if(!is_null($loginUrl) && trim($loginUrl,'/') === $uniqueId)
+            {
+                return false;
+            }
         }
 
         if ($this->owner instanceof Module) {

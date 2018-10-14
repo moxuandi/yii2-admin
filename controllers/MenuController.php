@@ -2,18 +2,15 @@
 namespace moxuandi\admin\controllers;
 
 use Yii;
-use moxuandi\admin\models\Menu;
-use moxuandi\admin\models\searchs\Menu as MenuSearch;
+use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 use moxuandi\admin\components\Helper;
+use moxuandi\admin\models\Menu;
+use moxuandi\admin\models\searchs\Menu as MenuSearch;
 
 /**
  * MenuController implements the CRUD actions for Menu model.
- *
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
  */
 class MenuController extends Controller
 {

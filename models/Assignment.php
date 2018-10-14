@@ -8,9 +8,6 @@ use moxuandi\admin\components\Helper;
 
 /**
  * Description of Assignment
- *
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 2.5
  */
 class Assignment extends BaseObject
 {

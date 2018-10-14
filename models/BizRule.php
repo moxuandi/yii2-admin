@@ -7,9 +7,6 @@ use moxuandi\admin\components\Configs;
 
 /**
  * BizRule
- *
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
  */
 class BizRule extends \yii\base\Model
 {

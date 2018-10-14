@@ -1,8 +1,5 @@
 /**
  * Database schema required by yii2-admin.
- *
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 2.5
  */
 
 drop table if exists [menu];

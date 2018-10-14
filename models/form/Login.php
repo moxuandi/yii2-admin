@@ -1,5 +1,4 @@
 <?php
-
 namespace moxuandi\admin\models\form;
 
 use Yii;
