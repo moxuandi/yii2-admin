@@ -43,7 +43,7 @@ class Module extends \yii\base\Module
     /**
      * @var array 导航栏项目.
      */
-    public $navbar;
+    public $navBar;
     /**
      * @var string 模块使用的布局视图. 默认为父模块的布局.
      * 当`layout`设置为`left-menu`, `right-menu`或`top-menu`时, 使用它.
@@ -95,15 +95,12 @@ class Module extends \yii\base\Module
             ];
         }
 
-        // 用户没有定义 $navbar 时, 自动生成
-        if ($this->navbar === null && Yii::$app instanceof \yii\web\Application) {
-            $this->navbar = [
+        // 用户没有定义 $navBar 时, 自动生成
+        if ($this->navBar === null && Yii::$app instanceof \yii\web\Application) {
+            $this->navBar = [
                 ['label' => Yii::t('rbac-admin', 'Help'), 'url' => ['default/index']],
                 ['label' => Yii::t('rbac-admin', 'Application'), 'url' => Yii::$app->homeUrl],
             ];
-        }
-        if (class_exists('yii\jui\JuiAsset')) {
-            Yii::$container->set('moxuandi\admin\AutoCompleteAsset', 'yii\jui\JuiAsset');
         }
     }
 
@@ -171,7 +168,6 @@ class Module extends \yii\base\Module
     {
         if (parent::beforeAction($action)) {
             $view = $action->controller->getView();
-
             $view->params['breadcrumbs'][] = [
                 'label' => ($this->defaultUrlLabel ?: Yii::t('rbac-admin', 'Admin')),
                 'url' => ['/' . ($this->defaultUrl ?: $this->uniqueId)],
