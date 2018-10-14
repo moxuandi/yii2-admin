@@ -2,22 +2,20 @@
 namespace moxuandi\admin\controllers;
 
 use Yii;
+use yii\web\Controller;
 
 /**
- * DefaultController
- *
- * @author Misbahul D Munir <misbahuldmunir@gmail.com>
- * @since 1.0
+ * Class DefaultController
  */
-class DefaultController extends \yii\web\Controller
+class DefaultController extends Controller
 {
-
     /**
-     * Action index
+     * @param string $page 页面路径
+     * @return string|\yii\console\Response|\yii\web\Response
      */
     public function actionIndex($page = 'README.md')
     {
-        if (strpos($page, '.png') !== false) {
+        if(strpos($page, '.png') !== false){
             $file = Yii::getAlias("@moxuandi/admin/{$page}");
             return Yii::$app->getResponse()->sendFile($file);
         }
